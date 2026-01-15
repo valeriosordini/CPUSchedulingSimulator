@@ -11,7 +11,25 @@
 <body>
 <div class="container">
    <h2>CPU scheduler simulator</h2>
+   <h3>SRTF</h3>
+    <p>--> versione preemptive del SJF (Shortest Job FIrst): la CPU viene assegnata al processo 
+        con il minor tempo di burst. Se arriva un processo più breve, quello in esecuzione viene 
+        interrotto.
+    </p>
    <div>
+        <div id="input">
+           <label for="inId">Inserisci id processo: </label>
+           <input id="inId" placeholder="inserisci testo">
+           <br>
+           <label for="inAt">Inserisci tempo di arrivo: </label>
+           <input id="inAt" placeholder="inserisci testo">
+           <br>
+           <label for="inBt">Inserisci tempo di burst: </label>
+           <input id="inBt" placeholder="inserisci testo">
+           <br>
+           <label for="inPr">Inserisci priorità: </label>
+           <input id="inPr" placeholder="inserisci testo">
+       </div>
        <div>
           <button id="idStart" onclick="start()"> Start </button>
           <button id="idReset" onclick="reset()"> Reset </button>
