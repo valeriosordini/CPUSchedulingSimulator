@@ -23,6 +23,14 @@ function reset(){
  si inseriscono nel corpo della tabella i dati dei processi  (nome, tempo di arrivo, tempo di burst, tempo di burst rimanente, priorità)  si mostra il diagramma di Gantt di attivazione dei processi
 */
 function start(){
+   // lettura input
+   let id = document.getElementById("inId").value;
+   let arrival = document.getElementById("inAt").value;
+   let burst = document.getElementById("inBt").value;
+   let priority = document.getElementById("inPr").value;
+
+   //controllo!
+
    let i;
    rbt = bt;
    // si inseriscono nel corpo della tabella i dati dei processi 
@@ -45,4 +53,10 @@ function start(){
    }
    tableEl.replaceChild(newTBodyEl, oldTBodyEl);
    document.getElementById("output").style.display = "block";
+   
+   //svuotamento campi input
+   document.getElementById("inId").value = "";
+   document.getElementById("inAt").value = "";
+   document.getElementById("inBt").value = "";
+   document.getElementById("inPr").value = "";
 }
